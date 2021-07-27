@@ -55,6 +55,7 @@ public class MainTest {
     SelenideElement sport = $(byXpath("//a[contains(text(), 'Sport')]"));
     SelenideElement addToCart = $(byXpath("//button[contains(text(), 'Add to cart')]"));
     ElementsCollection numOfProductInCard = $$("table.CartSummaryTable__StyledTable-sc-1nljcub-0 tr:nth-child(1) td");
+    ElementsCollection deleteFromcard = $$("button.kpPvTx");
     ElementsCollection warenkorbIcon = $$("button.sc-dIsUp.kMuqUv");
     ElementsCollection warenkorbButton = $$("a.gfuSqG button.ilcNEp");
 
@@ -201,6 +202,7 @@ public class MainTest {
         addToCart.click();
         $(withText("Warenkorb")).shouldBe(Condition.visible);
         $(withText("1")).shouldBe(Condition.visible);
+        System.out.println("Number of delete buttons: " + deleteFromcard.size());
         Thread.sleep(5000);
 
         Assert.assertTrue(!seleniumCookieSet.equals(null));
