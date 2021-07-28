@@ -3,14 +3,9 @@
     <test verbose="2" name="Test1">
         <parameter name="Environment" value=""/>
         <classes>
-            <class name="com.selenide.demo.MainTest">
+            <class name="com.selenide.demo.tests.GaleriaTest">
                 <methods>
-                    <include name="todoGaleria"/>
-                    <include name="register"/>
-                    <include name="login"/>
-                    <include name="uploadImage"/>
-<!--                    <include name="sendEmail"/>-->
-                    <include name="testGallery"/>
+                    <include name="cart"/>
                 </methods>
             </class>
         </classes>
