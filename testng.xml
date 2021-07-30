@@ -5,7 +5,8 @@
         <classes>
             <class name="com.selenide.demo.tests.GaleriaTest">
                 <methods>
-                    <include name="cart"/>
+<!--                    <include name="cart"/>-->
+                    <include name="store"/>
                 </methods>
             </class>
         </classes>

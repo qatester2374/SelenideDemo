@@ -9,12 +9,13 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class Locators {
+    public static SelenideElement damenTab = $(byXpath("//a[contains(text(), 'Damen')]"));
     SelenideElement searchInput = $(byXpath("//input[@placeholder='Search products']"));
     public static SelenideElement allMenu = $(byXpath("//button[contains(text(), 'All menu')]"));
     public static SelenideElement radSport = $(byXpath("//a[contains(text(), 'Radsport')]"));
     public static SelenideElement winterschuhe = $(byXpath("//a[contains(text(), 'Winterschuhe')]"));
     SelenideElement span = $(byXpath("//span[contains(text(), 'Radsport')]"));
-    public static ElementsCollection searchResultsGrid = $$("div.heluOB div.hngzF");
+    public static ElementsCollection searchResultsGrid = $$("div.heluOB div.EPiAM");
     ElementsCollection labelsArticle = $$("div label");
     SelenideElement quantityPlus = $(byXpath("//button[@data-testid='plusButton']"));
     SelenideElement quantityMinus = $(byXpath("//button[@data-testid='minusButton']"));
@@ -28,7 +29,7 @@ public class Locators {
     SelenideElement lastPage = $(byClassName("gkk-pop-pagination__nav-icon--relative-left"));
     SelenideElement lastPageNumbers = $(byClassName("gkk-pop-pagination__nav-pages"));
     ElementsCollection lastPageNumbersElements = $$("ul .gkk-pop-pagination__nav-pages-item");
-    SelenideElement filiale = $(byXpath("//span[contains(text(), 'Filiale')]"));
+    public static SelenideElement filiale = $(byXpath("//span[contains(text(), 'Filiale')]"));
     SelenideElement andern = $(byXpath("//button[contains(text(), 'ndern')]"));
     SelenideElement findStore = $(byXpath("//input[@placeholder='Find store']"));
     //    ElementsCollection stores = $$("div .kMuqUv");
@@ -39,4 +40,8 @@ public class Locators {
     ElementsCollection numOfProductInCard = $$("table.CartSummaryTable__StyledTable-sc-1nljcub-0 tr:nth-child(1) td");
     ElementsCollection warenkorbIcon = $$("button.sc-dIsUp.kMuqUv");
     ElementsCollection warenkorbButton = $$("a.gfuSqG button.ilcNEp");
+    public static ElementsCollection links = $$("div.kFpSeR ul li a");
+    public static ElementsCollection body = $$("div.sc-kEqXSa.bAVzgZ");
+    public static SelenideElement close = $(byXpath("/html/body/div[4]/button"));
+    public static ElementsCollection deleteFromCard = $$("div.sc-hHEiqL.ccTnQh div div div button.sc-dIsUp.bpicMv.sc-dlMDgC.kpPvTx svg");
 }

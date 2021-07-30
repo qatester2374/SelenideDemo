@@ -19,8 +19,11 @@ public abstract class PageBase {
     }
 
     protected void gridIsDisplayed(ElementsCollection searchGrid) {
-        $(searchGrid.get(0)).shouldBe(Condition.exist);
-        System.out.println(searchGrid.size());
+        if(Condition.visible.equals(true)) {
+
+        }
+        $(searchGrid.get(0)).shouldBe(Condition.visible);
+        System.out.println("SEARCH GRID SIZE: " + searchGrid.size());
         Assert.assertTrue(searchGrid.size() > 0);
     }
 

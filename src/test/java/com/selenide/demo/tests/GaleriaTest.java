@@ -1,23 +1,17 @@
 package com.selenide.demo.tests;
 
+import com.selenide.demo.base.TestBase;
 import com.selenide.demo.keyword.GaleriaKeywords;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.open;
+public class GaleriaTest extends TestBase {
 
-public class GaleriaTest {
-
-    GaleriaKeywords galeriaKeywords;
+    protected GaleriaKeywords galeriaKeywords;
 
     @BeforeTest
-    void openPage() {
+    void before() {
         galeriaKeywords = new GaleriaKeywords();
-    }
-
-    @BeforeMethod
-    void init() {
-        open("https://galeria.stage.galeria.bestbytes.net/", "", "demo", "dfLr8dY7e7ZJJmtqwAJtVQZiGHNiUZ9gNssMjK4rHTFFaTeUd6");
-        open("https://galeria.stage.galeria.bestbytes.net/");
     }
 
     @Test
@@ -26,13 +20,11 @@ public class GaleriaTest {
         Thread.sleep(5000);
     }
 
-    @AfterMethod
-    void close() {
-
+    @Test
+    void store() throws InterruptedException {
+        Thread.sleep(15000);
+        galeriaKeywords.favoriteStore();
+        Thread.sleep(15000);
     }
 
-    @AfterTest
-    void tearDown() {
-
-    }
 }
