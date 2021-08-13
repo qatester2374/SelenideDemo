@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" verbose="1" thread-count="5" parallel="true">
+    <test verbose="2" name="Test Chrome">
+        <parameter name="Environment" value="chrome"/>
+        <classes>
+            <class name="com.selenide.demo.tests.GaleriaTest">
+                <methods>
+                    <include name="cart"/>
+                    <include name="store"/>
+                    <include name="hover"/>
+                    <include name="articleHeader"/>
+                    <include name="quantity"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" name="Test Firefox">
+        <parameter name="Environment" value="firefox"/>
+        <classes>
+            <class name="com.selenide.demo.tests.GaleriaTest">
+                <methods>
+                    <include name="cart"/>
+                    <include name="store"/>
+                    <include name="hover"/>
+                    <include name="articleHeader"/>
+                    <include name="quantity"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" name="Test Edge">
+        <parameter name="Environment" value="edge"/>
+        <classes>
+            <class name="com.selenide.demo.tests.GaleriaTest">
+                <methods>
+                    <include name="cart"/>
+                    <include name="store"/>
+                    <include name="hover"/>
+                    <include name="articleHeader"/>
+                    <include name="quantity"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

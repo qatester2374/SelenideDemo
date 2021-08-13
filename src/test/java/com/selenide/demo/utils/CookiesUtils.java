@@ -22,4 +22,8 @@ public class CookiesUtils {
         }
         return null;
     }
+
+    public void setCookie() {
+        System.out.println(seleniumCookieSet.isEmpty());
+    }
 }

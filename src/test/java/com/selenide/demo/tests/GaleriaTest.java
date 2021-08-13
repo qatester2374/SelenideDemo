@@ -22,9 +22,36 @@ public class GaleriaTest extends TestBase {
 
     @Test
     void store() throws InterruptedException {
-        Thread.sleep(15000);
+//        Thread.sleep(15000);
         galeriaKeywords.favoriteStore();
-        Thread.sleep(15000);
+        Thread.sleep(5000);
+    }
+
+    @Test
+    void hover() throws InterruptedException {
+        galeriaKeywords.hoverArticleImages();
+    }
+
+    @Test
+    void articleHeader() throws InterruptedException {
+        galeriaKeywords.validateArticleHeader();
+    }
+
+    @Test
+    void quantity() throws InterruptedException {
+        galeriaKeywords.changeQuantity();
+        Thread.sleep(2000);
+    }
+
+    @Test
+    void menus() throws InterruptedException {
+        galeriaKeywords.openMenuInHeader();
+    }
+
+    @Test
+    void filialFinder() throws InterruptedException {
+        galeriaKeywords.filialFinderKey();
+        Thread.sleep(4000);
     }
 
 }
